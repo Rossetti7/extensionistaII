@@ -1,0 +1,272 @@
+
+/* UNINTER - Analise e Desenvolvimento de Sistemas */
+/* Trabalho Final - UNINTER - Extensionista II */
+/* Lucas França Rossetti 4537277 */
+/* Carolyne Bahiense Barcelar Rossetti 4537298 */
+/* Este é um comentário em CSS */
+*{
+    background-color: black;
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('../fonts/CaviarDreams.ttf') format('truetype'),
+}
+@font-face {
+    font-family: 'Ayry';
+    src: url('../fonts/Airy Restoration.otf') format('opentype'),
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: blue;
+}
+
+body{
+    margin:0;
+    padding:0;
+    color: white;
+}
+header{
+    display:flex;
+    justify-content:center;
+    background-color: black;
+    color: white;
+    border-bottom: 2px solid #f8b195;
+    margin-bottom: 25px;
+}
+
+.container{
+    display:flex;
+    justify-content: space-between;
+    width:1200px;
+    height:70px;
+}
+.logo img{
+    max-height: 50px;
+}
+.logo, .rights-reserved{
+    display:flex;
+    align-items:center;
+    color: white;
+}
+.menu{
+    display:flex;
+    align-items:center;
+}
+nav ul, nav li{
+    list-style: none;
+    margin:0;
+    padding: 0;
+    color: white;
+}
+nav ul{
+    display: flex;
+}
+nav a{
+    display:block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    color:#f8b195;
+}
+.redessociais{
+    display:flex;
+    align-items:center;
+}
+.redessociais a{
+    display:block;
+    background-position: center;
+    padding: 20px;
+}
+
+
+#vidbanner{
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    width: 100%;
+    flex:2;
+}
+#geral{
+    display:flex;
+    justify-content: center;
+    height: 1050px;
+}
+#geral section{
+    flex:4;
+}
+#geral aside{
+    flex:1;
+}
+
+.widget-title{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.widget-title-text{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Ayry';
+}
+.widget-title-bar{
+    width:70px;
+    height:2px;
+    background-color: #f8b195;
+    margin-bottom: 10px;
+}
+aside .widget-body{
+    text-align: center;
+    font-size: 15px;
+}
+
+aside .widget img{
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.widget-body .redessociais{
+    justify-content: center;
+}
+.pattern{
+    display:flex;
+    max-height: 250px;
+
+}
+.pattern-image img{
+    max-height: 200px ;
+    margin: 10px;
+}
+.pattern-info{
+    justify-content: center;
+    padding: 20px 100px 20px 20px;
+}
+.pattern-name{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Ayry';
+}
+.pattern-name:hover{
+    color:#777777;
+    cursor: pointer;
+}
+.pattern-date{
+    color:#f8b195;
+    font-size: 15px;
+    margin-bottom: 10px;    
+    font-family: 'Caviar Dreams';
+}
+.pattern-desc{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.widget-info-bar{
+    width:70px;
+    height:2px;
+    background-color:#E6ECFF;
+    margin-bottom: 10px;
+}
+
+.photos-widget{
+    display: inline-block;
+    height: 90px;
+    width:90px;
+    background-color: #f8b195;
+    filter:grayscale(100%);
+    border-radius: 10px;
+    background-size:cover;
+}
+
+.photos-widget:hover{
+    filter:grayscale(0%);
+}
+#widget-photos-gray1,#widget-photos-gray4{
+    background-image: url('../images/carolbahiense.png');
+    height: 90px;
+    width:90px;
+}
+#widget-photos-gray2,#widget-photos-gray3{
+    background-image: url('../images/lucasrossetti.png');
+    height: 90px;
+    width:90px;
+}
+footer{
+    background-color: black;
+    display:flex;
+    justify-content:center;
+    font-size: 10px;
+}
+.rights-reserved-responsive{
+        display: none;
+}
+@media screen and (max-width: 900px) {
+    aside{
+        display:none;
+    }
+    .pattern-info{
+        display:flex;
+        flex-direction: column;  
+    }
+}
+@media screen and (max-width: 700px) {
+    .pattern-desc{
+        display: none;
+    }
+    .pattern-info{
+        display:flex;
+        flex-direction: column;  
+    }
+    .logo{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 500px){
+    .pattern{
+        flex-direction: column;  
+        padding-bottom: 100px;
+    }
+    #geral{
+        height: 1500px;
+        display: flex;
+        justify-content: center;
+    }
+    #vidbanner{
+        background-size: 100%;
+    }
+    header .container .redessociais{
+        display:none;
+    }
+    header .container{
+        width: 100%;
+        display: flex;
+        justify-content:center ;
+    }
+    footer .container{
+        display: flex;
+        align-items: center;
+    }
+    .rights-reserved-responsive{
+        display: block;
+        margin-left: 10px;
+        
+    }
+    .rights-reserved{
+        display: none;
+    }
+    .widget-title{
+        margin-left: 10px;
+    }
+}
+
